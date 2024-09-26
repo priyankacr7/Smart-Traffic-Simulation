@@ -1,49 +1,53 @@
-# iFogSim2 (The New Version)
-A Toolkit for Modeling and Simulation of Resource Management Techniques in Internet of Things, Edge and Fog Computing Environments with the following new features:
- * Mobility-support and Migration Management
-   * Supporting real mobility datasets
-   * Implementing different random mobility models 
- * Microservice Orchestration
- * Dynamic Distributed Clustering
- * Any Combinations of Above-mentioned Features
- * Full Compatibility with the Latest Version of the CloudSim (i.e., [CloudSim 5](https://github.com/Cloudslab/cloudsim/releases)) and [Previous iFogSim Version](https://github.com/Cloudslab/iFogSim1) and Tutorials
+# Smart Traffic Simulation using Fog Computing
 
-iFogSim2 currently encompasses several new usecases such as:
- * Audio Translation Scenario
- * Healthcare Scenario
- * Crowd-sensing Scenario
+This project focuses on developing an advanced traffic management system leveraging IoT (Internet of Things) and edge computing technologies. It is built using the iFogSim framework, which allows simulation of fog and edge-based architectures.
 
-# How to run iFogSim2 ?
-* Eclipse IDE:
-  * Create a Java project
-  * Inside the project directory, initialize an empty Git repository with the following command:
-  ```
-  git init
-  ```
-  * Add the Git repository of iFogSim2 as the `origin` remote:
-  ```
-  git remote add origin https://github.com/Cloudslab/iFogSim
-  ```
-  * Pull the contents of the repository to your machine:
-  ```
-  git pull origin main
-  ```
-  * Include the JARs to your project  
-  * Run the example files (e.g. TranslationServiceFog_Clustering.java, CrowdSensing_Microservices_RandomMobility_Clustering.java) to get started
+## Key Features of the Project
 
-* IntelliJ IDEA:
-  * Clone the iFogSim2 Git repository to desired folder:
-  ```
-  git clone https://github.com/Cloudslab/iFogSim
-  ```
-  * Select "project from existing resources" from the "File" drop-down menu
-  * Verify the Java version
-  * Verify the external libraries in the "JARs" Folder are added to the project
-  * Run the example files (e.g. TranslationServiceFog_Clustering.java, CrowdSensing_Microservices_RandomMobility_Clustering.java) to get started
+### 1. Smart Traffic Light Control
+- Simulates the functioning of a smart traffic light system at intersections, designed to manage real-time traffic conditions using fog and cloud-based devices.
+- Includes sensors, cameras, and actuators at traffic intersections to monitor vehicle movement, detect congestion, and control traffic lights efficiently.
 
+### 2. IoT and Fog Architecture
+- Multiple fog devices, such as cameras, sensors, and actuators, are deployed at traffic intersections.
+- Each intersection has fog devices that process traffic data locally, reducing the amount of data sent to the cloud. This lowers latency and improves real-time system response.
 
-# References
- * Redowan Mahmud, Samodha Pallewatta, Mohammad Goudarzi, and Rajkumar Buyya, <A href="https://arxiv.org/abs/2109.05636">iFogSim2: An Extended iFogSim Simulator for Mobility, Clustering, and Microservice Management in Edge and Fog Computing Environments</A>, Journal of Systems and Software (JSS), Volume 190, Pages: 1-17, ISSN:0164-1212, Elsevier Press, Amsterdam, The Netherlands, August 2022.
- * Harshit Gupta, Amir Vahid Dastjerdi , Soumya K. Ghosh, and Rajkumar Buyya, <A href="http://www.buyya.com/papers/iFogSim.pdf">iFogSim: A Toolkit for Modeling and Simulation of Resource Management Techniques in Internet of Things, Edge and Fog Computing Environments</A>, Software: Practice and Experience (SPE), Volume 47, Issue 9, Pages: 1275-1296, ISSN: 0038-0644, Wiley Press, New York, USA, September 2017.
- * Redowan Mahmud and Rajkumar Buyya, <A href="http://www.buyya.com/papers/iFogSim-Tut.pdf">Modelling and Simulation of Fog and Edge Computing Environments using iFogSim Toolkit</A>, Fog and Edge Computing: Principles and Paradigms, R. Buyya and S. Srirama (eds), 433-466pp, ISBN: 978-111-95-2498-4, Wiley Press, New York, USA, January 2019.
-"# Smart-Traffic-Simulation" 
+### 3. Edge Computing for Localized Processing
+- Implements fog computing to process data locally at intersections, reducing dependency on cloud resources.
+- This approach minimizes network congestion and enhances response times for traffic light control, making it adaptable to real-time conditions.
+
+### 4. Application Modules
+- **Traffic Manager**: Handles data from cameras and sensors.
+- **Traffic Analyzer**: Processes traffic data and provides instructions for controlling the traffic lights.
+- **Monitor**: Deployed in the cloud to oversee the overall operation of the system.
+
+### 5. Scalability
+- The system simulates multiple traffic intersections, each with its own set of fog devices and sensors.
+- Easily expandable by adding more intersections and connected devices, supporting large-scale city traffic management simulations.
+
+### 6. Real-Time Decision Making
+- Fog devices process sensor data and make real-time decisions about traffic light timings.
+- Ensures efficient traffic flow, reduces congestion, and improves road safety.
+
+## Simulation in iFogSim
+
+The **iFogSim** framework is used to simulate the entire system. This allows evaluation of performance metrics, such as latency, energy consumption, and network usage. 
+
+- **Architectures Supported**: Cloud-only, Fog-only, and Hybrid (Cloud and Fog).
+- The simulation helps analyze which configuration provides the best efficiency for smart city traffic management.
+
+## Main Components
+- **Fog Devices**: Deployed at various intersections to process local traffic data.
+- **Cameras & Sensors**: Capture real-time traffic data (vehicle and pedestrian movement) and feed it into the system.
+- **Traffic Manager**: Handles traffic data from sensors and cameras.
+- **Traffic Analyzer**: Analyzes traffic data and provides instructions on how to control traffic lights.
+- **Actuators**: Control the traffic lights based on instructions from the Traffic Manager.
+
+## Use Case and Real-World Impact
+
+This project aims to optimize urban traffic flow using edge computing and IoT. It helps manage congestion by dynamically adapting traffic lights in real-time. By processing data locally through fog devices, the solution reduces latency and dependency on cloud servers, making traffic management faster and more efficient.
+
+### Potential Benefits:
+- Reduced traffic congestion.
+- Improved road safety.
+- Lower emissions in smart cities through optimized vehicle and pedestrian flow.
